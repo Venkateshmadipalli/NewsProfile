@@ -29,7 +29,7 @@ class SearchViewController: UIViewController {
         if Reachability.isConnectedToNetwork(){
         guard !query.trimmingCharacters(in: .whitespaces).isEmpty else { return }
         isLoading = true
-        let apiKey = "c99e6024510847e3af5a2da405347a26"
+        let apiKey = "246f2b4e33a64b079a5bc0d90a741f3c"
         let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? query
         let urlString = "https://newsapi.org/v2/everything?q=\(encodedQuery)&page=\(page)&pageSize=20&apiKey=\(apiKey)"
         guard let url = URL(string: urlString) else { return }
